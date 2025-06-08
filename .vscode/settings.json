@@ -1,0 +1,9 @@
+{
+    "files.eol": "\n",
+    "files.defaultLanguage": "python",
+    "files.encoding": "utf8",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.gpuAcceleration": "off",
+    "terminal.integrated.rendererType": "canvas"
+}
+

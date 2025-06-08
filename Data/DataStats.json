@@ -1,0 +1,72 @@
+{ 
+    "Forest": [
+    {
+        "enemy": {
+            "NAME": "algo",
+            "HP_M": 1,
+            "DMG": [5, 15],
+            "DMG_min": [3, 4],
+            "MP_M": 100,
+            "EXP_TO_PLAYER": 1000,
+            "DEF": [0, 0],
+            "LS": 0,
+            "DBUFF_TO_PLAYER": [],
+            "BUFF_RECEIVED": [],
+            "GOLD": 23
+    },
+
+        "enemy2": {
+            "NAME": "algo2",
+            "HP_M": 50,
+            "DMG": [5, 10],
+            "DMG_min": [3, 4],
+            "MP_M": 100,
+            "EXP_TO_PLAYER": 10,
+            "DEF": [2, 10],
+            "LS": 0,
+            "DBUFF_TO_PLAYER": [],
+            "BUFF_RECEIVED": [],
+            "GOLD": 44
+    }, 
+        "Strings": {
+            "desc": "Bosque",
+            "exit": "Saliendo del Bosque"
+        }
+
+    }],
+    "Cave": [
+    {
+        "enemy3": {
+            "NAME": "algo3",
+            "HP_M": 10,
+            "DMG": [12, 23],
+            "DMG_min": [3, 4],
+            "MP_M": 100,
+            "EXP_TO_PLAYER": 10,
+            "DEF": [5, 20],
+            "LS": 0,
+            "DBUFF_TO_PLAYER": [],
+            "BUFF_RECEIVED": [],
+            "GOLD": 443
+        },
+
+        "enemy4": {
+            "NAME": "algo4",
+            "HP_M": 50,
+            "DMG": [27, 34],
+            "DMG_min": [3, 4],
+            "MP_M": 100,
+            "EXP_TO_PLAYER": 10,
+            "DEF": [20, 30],
+            "LS": 0,
+            "DBUFF_TO_PLAYER": [],
+            "BUFF_RECEIVED": [],
+            "GOLD": 44342234234
+        },
+        "Strings": {
+            "desc": "Bosque",
+            "exit": "Saliendo del Bosque"
+        }
+    }]
+}
+
