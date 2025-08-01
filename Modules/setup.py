@@ -13,7 +13,32 @@ console = Console()
 
 ##################      Classes
 class cPlayer:
-    """ Player class """
+    """ 
+    Player class
+    
+    Status:
+        Health & Health_max
+        Mana & Mana_max
+        EXP: Current XP
+        EXP_M: EXP needed for next level
+        Gold: Current money
+        Level: +1 when EXP >= EXP_M, 1+ skill point and 5+ Health_max
+    
+    Attributes:
+        DEF: (DEF * 0.7) - Damage, Ignores Debuff Damage
+        MDEF: (MDEF * 0.5) - Magical Damage, Debuff Damage counts as Magical Damage
+        AGI: AGI% of Dealing damage (base 60%)
+        DefensePercentage: Blocks a percentaje of the incoming damage, Ignores Debuff Damage
+        CounterAttack: CounterAttack% of attack without using a turn when you receive damage from a enemy, Ignores Debuff Damage
+        ManaRegen: Every Turn you regen mana based on this variable value: Mana+= ManaRegen
+        EvadeAttacks: EvadeAttacks% of not receiving incoming Damage
+        
+    Items:
+        Helmet: 
+
+        """
+        
+    
     def __init__(self, name, weapon):
         self.name = name
         # Main Stats
@@ -68,7 +93,7 @@ class cPlayer:
             # Get physical and magical damage from weapon
             physical_dmg, magical_dmg = self.weapon.use_weapon(self)
             
-            # Apply defense calculations
+            # Apply defense calculations TODO: Formulas are wrong
             physical_damage = max(0, physical_dmg - (enemy.DEF // 2))
             magical_damage = max(0, magical_dmg - (enemy.MDEF // 1.2))
             
@@ -381,10 +406,6 @@ class cInventory:
         keyboard.wait("enter", suppress=True)
 
     
-
-
-
-
 class cDebuff:
     def __init__(self, name, PersistentDamageDebuff=None, HealDebuff=None, ArmorPierce=None, AgilityDebuff=None, MPDisruption=None, EvadeDebuff=None, CounterAttackDebuff=None): 
         self.name = name
@@ -472,7 +493,7 @@ def setup_player():
         del NameLoop
     return(cPlayer(NamePlayer, None))
 
-def fShop():
+def fShop(player):
     try:
         if text_input is not None:
             pass

@@ -33,14 +33,14 @@ CONFIG = {
 
     "COMBAT": {
         "DELAY_BETWEEN_ROUNDS": 0.5,  # Seconds between combat rounds
-        "CHANCE_TO_FLEE": 0.3,      # Base chance to successfully flee combat
+        "CHANCE_TO_FLEE": 0.3,      # Base chance to successfully flee combat, TODO: Needs to be changed to EvadeAttacks
     },
     "DISPLAY": {
         "BAR_LENGTH": 25,           # Length of health/mana bars
         "MENU_REFRESH_RATE": 0.5,   # Seconds to wait before refreshing menus
     },
     "DEBUG": {
-        "ENABLED": False,           # Enable debug mode
+        "ENABLED": False,           # Enable debug mode, It does nothing
     }
 }
 
@@ -455,7 +455,7 @@ def main():
         console.print("[info]Entrando a la tienda...[/info]")
         
         try:
-            fShop()
+            fShop(player)
         except Exception as e:
             console.print(f"[danger]Error en la tienda: {str(e)}[/danger]")
         
@@ -888,3 +888,5 @@ if __name__ == "__main__":
         console.print(f"[danger]Error crítico: {str(e)}[/danger]")
         console.print("[danger]El juego se cerrará.[/danger]")
         sys.exit(1)
+
+

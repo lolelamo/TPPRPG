@@ -1,7 +1,7 @@
 # TPPRPG Game
 
 ## Overview
-TPPRPG is a text-based role-playing game (RPG) built in Python. Players can explore different zones, engage in combat with various enemies, manage their inventory, and level up their characters. The game features a main menu for navigation and utilizes a modular structure for better organization and maintainability.
+TPPRPG is a text-based role-playing game (RPG) built in Python.
 
 ## Project Structure
 ```
@@ -15,8 +15,8 @@ TPPRPG
 ├── Data                 # Contains game data files
 │   ├── DataStats.json   # JSON data for game statistics and enemy attributes
 │   └── SaveGame.json    # Stores the current game state
-├── requirements.txt      # Lists Python dependencies
-└── README.md             # Documentation for the project
+├── requirements.txt     # Lists Python dependencies
+└── README.md            # Documentation for the project
 ```
 
 ## Installation
