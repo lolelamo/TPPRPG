@@ -5,11 +5,12 @@ from rich.panel import Panel
 from pathlib import Path
 import logging
 
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    filename='tpprpg_loader.log',
+    filename='tpprpg.log',
     filemode='a'
 )
 logger = logging.getLogger('TPPRPG.Loader')
@@ -195,13 +196,13 @@ def _handle_shops(data, Object, Content):
         logger.warning(f"'{Content}' not found in {Object}")
         return {}
 
-def _handle_saves(data, Object, Content):
+def _handle_saves(data, SaveSlot, Content):
     """
     Handle SaveSlots.json structure with null values.
     
     Args:
         data: The loaded JSON data
-        Object: The save slot (e.g., "Save1")
+        SaveSlot: The save slot (e.g., "Save1")
         Content: Specific content or None for all save data
     
     Returns:
@@ -209,10 +210,10 @@ def _handle_saves(data, Object, Content):
     """
     if Content is None:
         # Return all save data for the slot
-        return data[Object]
+        return data[SaveSlot]
     else:
         # Return specific save data, preserving null values
-        save_data = data[Object].get(Content)
+        save_data = data[SaveSlot].get(Content)
         return save_data  # This could be null/None, which is intentional
 
 def _handle_generic_json(data, Object, Content):

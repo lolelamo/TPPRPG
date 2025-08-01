@@ -75,7 +75,7 @@ def main_c():
             else:
                 Write(str(LOG_PATH), "", "Running without admin privileges, Linux")
     else:
-        print("Info: keyboard library doesn't require admin privileges on Windows")
+        print("Info: keyboard library doesn't require admin privileges on Windows. This is optional")
         response = input("Do you want to restart this script with admin privileges? (y/n): ")
 
         if response.lower() in ['y', 'yes']:

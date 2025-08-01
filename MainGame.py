@@ -29,6 +29,8 @@ from enum import Enum, auto
 
 # Game configuration
 CONFIG = {
+    "ASK_FOR_ADMIN": True,  # If False (Recommended for Windows): skips the admin perms check
+
     "COMBAT": {
         "DELAY_BETWEEN_ROUNDS": 0.5,  # Seconds between combat rounds
         "CHANCE_TO_FLEE": 0.3,      # Base chance to successfully flee combat
@@ -74,7 +76,8 @@ chars: List[Any] = []
 current_state: GameState = GameState.MAIN_MENU
 
 # Run initial admin check
-main_c()
+if CONFIG["ASK_FOR_ADMIN"]:
+    main_c()
 
 def zone_loader(player_zone: str) -> cEnemy:
     """
