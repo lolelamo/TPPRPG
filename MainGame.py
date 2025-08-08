@@ -19,6 +19,8 @@ from Modules.setup import (cEnemy,
                     InventorySorter,
                     enemy_loader)
 from Modules.check_admin import main_c
+from Modules.ModLoader import get_mod_loader, get_mod_api
+from Modules.ModDevTools import main_dev_menu
 
 import random
 import time as sp
@@ -33,7 +35,7 @@ CONFIG = {
 
     "COMBAT": {
         "DELAY_BETWEEN_ROUNDS": 0.5,  # Seconds between combat rounds
-        "CHANCE_TO_FLEE": 0.3,      # Base chance to successfully flee combat, TODO: Needs to be changed to EvadeAttacks
+        "CHANCE_TO_FLEE": 0.3,      # Base chance to successfully flee combat, TODO: Needs revision
     },
     "DISPLAY": {
         "BAR_LENGTH": 25,           # Length of health/mana bars
@@ -78,6 +80,7 @@ current_state: GameState = GameState.MAIN_MENU
 # Run initial admin check
 if CONFIG["ASK_FOR_ADMIN"]:
     main_c()
+cls = os.system('clear')
 
 def zone_loader(player_zone: str) -> cEnemy:
     """
@@ -272,6 +275,8 @@ def display_main_menu() -> None:
     table.add_row("[5]", "Usar/equipar objeto")
     table.add_row("[6]", "Pelear")
     table.add_row("[7]", "Mirar Stats")
+    table.add_row("[8]", "Gestión de Mods")
+    table.add_row("[9]", "Guardar")
     table.add_row("[0]", "Salir del juego")
     
     console.print(table)
@@ -315,7 +320,7 @@ def main():
     # Apply automatic regeneration and check inventory
     player.Check(vInventory)
     player.Mana = min(player.Mana + player.ManaRegen, player.Mana_max)
-    
+    cls
     # Clear the screen for better UI
     os.system('cls' if os.name == 'nt' else 'clear')
     
@@ -326,7 +331,7 @@ def main():
     display_main_menu()
     
     # Get player choice with validation
-    valid_options = [0, 1, 2, 3, 4, 5, 6, 7]
+    valid_options = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     main_input = get_validated_input("Selecciona una opción: ", valid_options)
     
     # Process player choice
@@ -725,7 +730,7 @@ def main():
             f"[bold]Defensa:[/bold] {player.DEF} puntos / {player.DefensePercentage}%",
             f"[bold]Agilidad:[/bold] {player.AGI}",
             f"[bold]Prob. ContraAtaque:[/bold] {player.CounterAttack}%",
-            f"[bold]Prob. Evasion:[/bold] {player.EvadeAttacks}%",
+            f"[bold]Prob. Evasion:[/bold] {player.Evasion}%",
             "",
             f"[bold yellow]Oro:[/bold yellow] {player.Gold}",
             f"[bold cyan]Experiencia:[/bold cyan] {player.EXP}/{player.EXP_M}"
@@ -760,6 +765,62 @@ def main():
         console.print("\n[info]Presiona Enter para volver al menú principal... ↵ [/info]")
         keyboard.wait("enter", suppress=True)
         current_state = GameState.MAIN_MENU
+    
+    elif main_input == 8:
+        # Gestión de Mods
+        console.print(Panel(" Gestión de Mods", style="cyan"))
+        
+        mod_loader_instance = get_mod_loader()
+        mod_api_instance = get_mod_api()
+        
+        while True:
+            console.print("\n1.  Mostrar mods cargados")
+            console.print("2.  Cargar/Recargar todos los mods")
+            console.print("3.  Estado del sistema de mods")
+            console.print("0.  Volver al menú principal")
+            
+            mod_choice = get_validated_input("Selecciona una opción: ", [0, 1, 2, 3])
+            
+            if mod_choice == 0:
+                break
+            elif mod_choice == 1:
+                mod_loader_instance.display_mods_info()
+                
+                # Mostrar comandos personalizados si existen
+                if mod_api_instance.custom_commands:
+                    console.print("\n[bold]Comandos personalizados disponibles:[/bold]")
+                    for cmd_name, cmd_info in mod_api_instance.custom_commands.items():
+                        console.print(f"• {cmd_name}: {cmd_info.get('description', 'Sin descripción')}")
+                
+            elif mod_choice == 2:
+                console.print("[info]Cargando mods...[/info]")
+                mod_loader_instance.load_all_mods()
+                console.print("[success]Proceso de carga completado.[/success]")
+                
+            elif mod_choice == 3:
+                console.print(Panel(" Estado del Sistema de Mods", style="green"))
+                
+                loaded_count = len(mod_loader_instance.loaded_mods)
+                console.print(f"Mods cargados: {loaded_count}")
+                
+                # Estadísticas de la API
+                console.print(f"Items registrados: {len(mod_api_instance.registered_items)}")
+                console.print(f"Enemigos registrados: {len(mod_api_instance.registered_enemies)}")
+                console.print(f"Zonas registradas: {len(mod_api_instance.registered_zones)}")
+                console.print(f"Comandos personalizados: {len(mod_api_instance.custom_commands)}")
+                console.print(f"Manejadores de eventos: {sum(len(handlers) for handlers in mod_api_instance.event_handlers.values())}")
+            
+            console.print("\n[info]Presiona Enter para continuar...[/info]")
+            keyboard.wait("enter", suppress=True)
+        
+        current_state = GameState.MAIN_MENU
+    
+    elif main_input == 9:
+        console.print("\n[warning]¿Deseas guardar antes de salir? (s/n)[/warning]")
+        save_response = input().lower()  
+        if save_response == 's' or save_response == 'si':
+            save_game()
+                
 
 # Add a save game function
 def save_game() -> bool:
@@ -852,6 +913,14 @@ def init_game():
     console.print(Panel("Bienvenido al Juego RPG", style="success"))
     console.print("[info]Iniciando juego...[/info]")
     
+    # Cargar mods automáticamente
+    try:
+        console.print("[info]Inicializando sistema de mods...[/info]")
+        mod_loader_instance = get_mod_loader()
+        mod_loader_instance.load_all_mods()
+    except Exception as e:
+        console.print(f"[warning]Error al cargar mods: {str(e)}[/warning]")
+    
     # Check for saved games
     if os.path.exists("./Data/SaveGame.json"):
         console.print("[info]Se ha encontrado una partida guardada.[/info]")
@@ -871,15 +940,6 @@ if __name__ == "__main__":
         while True:
             try:
                 main()
-            except KeyboardInterrupt:
-                console.print("\n[warning]¿Deseas guardar antes de salir? (s/n)[/warning]")
-                save_response = input().lower()
-                
-                if save_response == 's' or save_response == 'si':
-                    save_game()
-                
-                console.print("[info]¡Gracias por jugar! Hasta pronto.[/info]")
-                sys.exit(0)
             except Exception as e:
                 console.print(f"[danger]Error en el bucle principal: {str(e)}[/danger]")
                 console.print("[info]El juego intentará continuar...[/info]")

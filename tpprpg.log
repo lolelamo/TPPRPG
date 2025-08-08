@@ -1,0 +1,112 @@
+2025-08-06 10:28:41,365 - TPPRPG.Loader - INFO - Successfully wrote JSON data to \
+2025-08-06 10:43:43,703 - TPPRPG.Loader - INFO - Successfully wrote JSON data to \
+2025-08-06 11:01:35,274 - TPPRPG.Loader - INFO - Successfully wrote JSON data to \
+2025-08-06 11:01:46,138 - TPPRPG.Loader - INFO - Successfully wrote JSON data to \
+2025-08-07 10:15:17,916 - TPPRPG.ModLoader - INFO - Item registrado: magic_sword
+2025-08-07 10:15:17,916 - TPPRPG.ModLoader - INFO - Enemigo registrado: fire_dragon
+2025-08-07 10:15:17,916 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:15:17,916 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:15:17,916 - TPPRPG.ModLoader - INFO - Comando registrado: curar_magico
+2025-08-07 10:15:17,916 - TPPRPG.ModLoader - INFO - Successfully loaded mod: example_mod
+2025-08-07 10:16:21,652 - TPPRPG.ModLoader - INFO - Item registrado: magic_sword
+2025-08-07 10:16:21,653 - TPPRPG.ModLoader - INFO - Enemigo registrado: fire_dragon
+2025-08-07 10:16:21,653 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:16:21,653 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:16:21,653 - TPPRPG.ModLoader - INFO - Comando registrado: curar_magico
+2025-08-07 10:16:21,653 - TPPRPG.ModLoader - INFO - Successfully loaded mod: example_mod
+2025-08-07 10:20:47,951 - TPPRPG.ModLoader - INFO - Item registrado: 1001
+2025-08-07 10:20:47,951 - TPPRPG.ModLoader - INFO - Enemigo registrado: fsd_beast
+2025-08-07 10:20:47,951 - TPPRPG.ModLoader - INFO - Zona registrada: fsd_zone
+2025-08-07 10:20:47,951 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:20:47,951 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:20:47,951 - TPPRPG.ModLoader - INFO - Comando registrado: mi_comando
+2025-08-07 10:20:47,952 - TPPRPG.ModLoader - INFO - Successfully loaded mod: fsd
+2025-08-07 10:20:47,952 - TPPRPG.ModLoader - INFO - Item registrado: magic_sword
+2025-08-07 10:20:47,952 - TPPRPG.ModLoader - INFO - Enemigo registrado: fire_dragon
+2025-08-07 10:20:47,952 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:20:47,952 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:20:47,952 - TPPRPG.ModLoader - INFO - Comando registrado: curar_magico
+2025-08-07 10:20:47,953 - TPPRPG.ModLoader - INFO - Successfully loaded mod: example_mod
+2025-08-07 10:21:03,724 - TPPRPG.ModLoader - INFO - Item registrado: 1001
+2025-08-07 10:21:03,724 - TPPRPG.ModLoader - INFO - Enemigo registrado: fsd_beast
+2025-08-07 10:21:03,724 - TPPRPG.ModLoader - INFO - Zona registrada: fsd_zone
+2025-08-07 10:21:03,724 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:21:03,724 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:21:03,725 - TPPRPG.ModLoader - INFO - Comando registrado: mi_comando
+2025-08-07 10:21:03,725 - TPPRPG.ModLoader - INFO - Successfully loaded mod: fsd
+2025-08-07 10:21:03,725 - TPPRPG.ModLoader - INFO - Item registrado: magic_sword
+2025-08-07 10:21:03,725 - TPPRPG.ModLoader - INFO - Enemigo registrado: fire_dragon
+2025-08-07 10:21:03,725 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:21:03,725 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:21:03,725 - TPPRPG.ModLoader - INFO - Comando registrado: curar_magico
+2025-08-07 10:21:03,726 - TPPRPG.ModLoader - INFO - Successfully loaded mod: example_mod
+2025-08-07 10:21:07,212 - TPPRPG.ModLoader - INFO - Item registrado: 1001
+2025-08-07 10:21:07,212 - TPPRPG.ModLoader - INFO - Enemigo registrado: fsd_beast
+2025-08-07 10:21:07,212 - TPPRPG.ModLoader - INFO - Zona registrada: fsd_zone
+2025-08-07 10:21:07,212 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:21:07,212 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:21:07,213 - TPPRPG.ModLoader - INFO - Comando registrado: mi_comando
+2025-08-07 10:21:07,213 - TPPRPG.ModLoader - INFO - Successfully loaded mod: fsd
+2025-08-07 10:21:07,213 - TPPRPG.ModLoader - INFO - Item registrado: magic_sword
+2025-08-07 10:21:07,213 - TPPRPG.ModLoader - INFO - Enemigo registrado: fire_dragon
+2025-08-07 10:21:07,213 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:21:07,213 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:21:07,213 - TPPRPG.ModLoader - INFO - Comando registrado: curar_magico
+2025-08-07 10:21:07,214 - TPPRPG.ModLoader - INFO - Successfully loaded mod: example_mod
+2025-08-07 10:26:18,249 - TPPRPG.ModLoader - INFO - Item registrado: 1001
+2025-08-07 10:26:18,249 - TPPRPG.ModLoader - INFO - Enemigo registrado: fsd_beast
+2025-08-07 10:26:18,249 - TPPRPG.ModLoader - INFO - Zona registrada: fsd_zone
+2025-08-07 10:26:18,249 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:26:18,249 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:26:18,249 - TPPRPG.ModLoader - INFO - Comando registrado: mi_comando
+2025-08-07 10:26:18,250 - TPPRPG.ModLoader - INFO - Successfully loaded mod: fsd
+2025-08-07 10:26:18,250 - TPPRPG.ModLoader - INFO - Item registrado: magic_sword
+2025-08-07 10:26:18,250 - TPPRPG.ModLoader - INFO - Enemigo registrado: fire_dragon
+2025-08-07 10:26:18,250 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:26:18,250 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:26:18,250 - TPPRPG.ModLoader - INFO - Comando registrado: curar_magico
+2025-08-07 10:26:18,251 - TPPRPG.ModLoader - INFO - Successfully loaded mod: example_mod
+2025-08-07 10:26:56,486 - TPPRPG.ModLoader - INFO - Item registrado: 1001
+2025-08-07 10:26:56,486 - TPPRPG.ModLoader - INFO - Enemigo registrado: fsd_beast
+2025-08-07 10:26:56,486 - TPPRPG.ModLoader - INFO - Zona registrada: fsd_zone
+2025-08-07 10:26:56,486 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:26:56,486 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:26:56,486 - TPPRPG.ModLoader - INFO - Comando registrado: mi_comando
+2025-08-07 10:26:56,487 - TPPRPG.ModLoader - INFO - Successfully loaded mod: fsd
+2025-08-07 10:26:56,487 - TPPRPG.ModLoader - INFO - Item registrado: magic_sword
+2025-08-07 10:26:56,487 - TPPRPG.ModLoader - INFO - Enemigo registrado: fire_dragon
+2025-08-07 10:26:56,487 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:26:56,487 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:26:56,487 - TPPRPG.ModLoader - INFO - Comando registrado: curar_magico
+2025-08-07 10:26:56,488 - TPPRPG.ModLoader - INFO - Successfully loaded mod: example_mod
+2025-08-07 10:29:44,668 - TPPRPG.ModLoader - INFO - Item registrado: 1001
+2025-08-07 10:29:44,668 - TPPRPG.ModLoader - INFO - Enemigo registrado: fsd_beast
+2025-08-07 10:29:44,668 - TPPRPG.ModLoader - INFO - Zona registrada: fsd_zone
+2025-08-07 10:29:44,668 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:29:44,668 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:29:44,668 - TPPRPG.ModLoader - INFO - Comando registrado: mi_comando
+2025-08-07 10:29:44,668 - TPPRPG.ModLoader - INFO - Successfully loaded mod: fsd
+2025-08-07 10:29:44,669 - TPPRPG.ModLoader - INFO - Item registrado: magic_sword
+2025-08-07 10:29:44,669 - TPPRPG.ModLoader - INFO - Enemigo registrado: fire_dragon
+2025-08-07 10:29:44,669 - TPPRPG.ModLoader - INFO - Event handler registrado para: player_level_up
+2025-08-07 10:29:44,669 - TPPRPG.ModLoader - INFO - Event handler registrado para: enemy_defeated
+2025-08-07 10:29:44,669 - TPPRPG.ModLoader - INFO - Comando registrado: curar_magico
+2025-08-07 10:29:44,669 - TPPRPG.ModLoader - INFO - Successfully loaded mod: example_mod
+2025-08-07 10:29:49,930 - TPPRPG.Loader - ERROR - Error writing to Data/SaveGame.json: unhashable type: 'dict'
+Traceback (most recent call last):
+  File "/home/kali/Desktop/python/TPPRPG/Modules/Loader.py", line 307, in Write
+    _write_saves(data, Object, Content, ToWrite)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/python/TPPRPG/Modules/Loader.py", line 442, in _write_saves
+    if Object not in data:
+       ^^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'dict'
+2025-08-07 10:33:00,282 - TPPRPG.Loader - ERROR - Error writing to Data/SaveGame.json: unhashable type: 'dict'
+Traceback (most recent call last):
+  File "/home/kali/Desktop/python/TPPRPG/Modules/Loader.py", line 307, in Write
+    _write_saves(data, Object, Content, ToWrite)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/python/TPPRPG/Modules/Loader.py", line 442, in _write_saves
+    if Object not in data:
+       ^^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'dict'

@@ -4,7 +4,7 @@ from rich.console import Console
 from rich.panel import Panel
 from pathlib import Path
 import logging
-
+logpath = Path
 
 # Configure logging
 logging.basicConfig(

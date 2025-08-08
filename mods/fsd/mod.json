@@ -1,0 +1,10 @@
+{
+    "mod_id": "fsd",
+    "name": "4",
+    "version": "0",
+    "author": "423",
+    "description": "4",
+    "main": "main.py",
+    "dependencies": [],
+    "game_version": "1.0.0"
+}

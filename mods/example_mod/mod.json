@@ -1,0 +1,10 @@
+{
+    "mod_id": "example_mod",
+    "name": "Mod de Ejemplo",
+    "version": "1.0.0",
+    "author": "Tu Nombre",
+    "description": "Un mod de ejemplo para mostrar cómo crear mods",
+    "main": "main.py",
+    "dependencies": [],
+    "game_version": "1.0.0"
+}

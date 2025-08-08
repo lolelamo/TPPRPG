@@ -62,25 +62,54 @@ def main_c():
     admin = is_admin()
     if platform.system() != "Windows":
         if admin:
+            print("\033[2J\033[H", end='')  # Clear screen
             print("This script is running with administrator privileges.")
+            print("Press Enter to continue...")
+            input()
 
         else:
+            print("\033[2J\033[H", end='')  # Clear screen
             print("This script is NOT running with administrator privileges.")
-            print("Some operations may not work properly.\n")
+            print("Some operations may not work properly.")
+            print("")
+            print("The 'keyboard' library requires root privileges on Linux.")
+            print("")
             
-            # Ask for admin
-            response = input("Do you want to restart this script with admin privileges? (y/n): ")
-            if response.lower() in ['y', 'yes']:
-                request_admin()
-            else:
+            # Ask for admin with better formatting
+            try:
+                response = input("Do you want to restart this script with admin privileges? (y/n): ").strip().lower()
+                print("\033[2J\033[H", end='')  # Clear screen after input
+                
+                if response in ['y', 'yes']:
+                    print("Requesting administrator privileges...")
+                    request_admin()
+                else:
+                    print("Continuing without admin privileges...")
+                    Write(str(LOG_PATH), "", "Running without admin privileges, Linux")
+            except KeyboardInterrupt:
+                print("\nOperation cancelled by user.")
+                sys.exit(1)
+            except EOFError:
+                print("\nInput error. Continuing without admin privileges...")
                 Write(str(LOG_PATH), "", "Running without admin privileges, Linux")
     else:
+        print("\033[2J\033[H", end='')  # Clear screen
         print("Info: keyboard library doesn't require admin privileges on Windows. This is optional")
-        response = input("Do you want to restart this script with admin privileges? (y/n): ")
-
-        if response.lower() in ['y', 'yes']:
-            request_admin()
-        else:
+        try:
+            response = input("Do you want to restart this script with admin privileges? (y/n): ").strip().lower()
+            print("\033[2J\033[H", end='')  # Clear screen after input
+            
+            if response in ['y', 'yes']:
+                print("Requesting administrator privileges...")
+                request_admin()
+            else:
+                print("Continuing without admin privileges...")
+                Write(str(LOG_PATH), "", "Running without admin privileges, Windows")
+        except KeyboardInterrupt:
+            print("\nOperation cancelled by user.")
+            sys.exit(1)
+        except EOFError:
+            print("\nInput error. Continuing without admin privileges...")
             Write(str(LOG_PATH), "", "Running without admin privileges, Windows")
 
 if __name__ == "__main__":

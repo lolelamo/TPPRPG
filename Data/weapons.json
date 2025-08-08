@@ -17,7 +17,7 @@
         }
     },
 
-    "TYPE:STAFFS": 
+    "TYPE:Staffs": 
     {
         "staff": {
             "STATIC_ID": 3,

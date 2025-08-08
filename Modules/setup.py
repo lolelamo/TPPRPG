@@ -34,8 +34,12 @@ class cPlayer:
         EvadeAttacks: EvadeAttacks% of not receiving incoming Damage
         
     Items:
-        Helmet: 
+        weapon: cWeapon
+        helmet: cEquippableItems TYPE:Helmet
+        armor: cEquippableItems TYPE:Armor
+        boots: cEquippableItems TYPE:Boots
 
+        TODO: Finish Comments
         """
         
     
@@ -53,7 +57,7 @@ class cPlayer:
         self.AGI = 0
         self.DefensePercentage = 0
         self.CounterAttack = 0
-        self.EvadeAttacks = 0
+        self.Evasion = 0
         self.ManaRegen = 2.5
         # Gold and Experience
         self.Gold = 50
@@ -503,10 +507,11 @@ def fShop(player):
 
     LoopShopEvent = True
     player.Check(vInventory)
-    i += 0
+    i = 0
     while LoopShopEvent:
         for ItemShop in SLObject:
             print(f"Objeto: {ItemShop.name} --Coste: {ItemShop.Gold_Cost}")
+            print("----")
             i += 1
             if i == 5:
                 break
@@ -601,3 +606,4 @@ def enemy_loader(data_npc, return_single=False):
         return [] if not return_single else None
         
     return enemy_total_list if not return_single else random.choice(enemy_total_list)
+

@@ -1,0 +1,44 @@
+{
+    "items": {
+        "example_sword": {
+            "id": 1001,
+            "type": "weapon",
+            "name": "Espada de 423",
+            "physical_dmg_min": 15,
+            "physical_dmg_max": 25,
+            "magical_dmg_min": 5,
+            "magical_dmg_max": 10,
+            "gold_cost": 120,
+            "description": "Una poderosa espada creada por 423"
+        }
+    },
+    "enemies": {
+        "custom_beast": {
+            "id": "fsd_beast",
+            "NAME": "Bestia de 423",
+            "HP_M": 80,
+            "PHYSICAL_DMG": 25,
+            "MAGICAL_DMG": 15,
+            "PHYSICAL_DMG_min": 15,
+            "MAGICAL_DMG_min": 5,
+            "MP_M": 50,
+            "EXP_TO_PLAYER": 75,
+            "DEF": 10,
+            "LS": 2,
+            "DBUFF_TO_PLAYER": [],
+            "BUFF_RECEIVED": [],
+            "GOLD": 100,
+            "zone": "custom_zone"
+        }
+    },
+    "zones": {
+        "fsd_zone": {
+            "name": "Zona de 423",
+            "description": "Una misteriosa zona creada por 423",
+            "enemies": [
+                "custom_beast"
+            ],
+            "level_requirement": 5
+        }
+    }
+}
